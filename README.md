@@ -1,16 +1,55 @@
 # oracle-spec
 
-A declarative spec for encoding human norms for system behavior.
+Oracle-Spec: A Declarative Standard for Defining Good AI Behavior
 
-The authors of an AI oracle drive what constitutes good AI behavior.
+Huggingface Benchmarks is the top way to compare AI Agents. The problem
+is that it requires coding expertise to personalize and there
+is no standard.
+
+An AI oracle is a proposed solution.
+
+What is an AI oracle?
+
+An AI oracle has a dialog with a human who is looking to choose which of many competing AI agents
+will lead them to their best conditional outcomes.
+
+The aim of Oracle-Spec is to give non-coders a cheap, transparent and repeatable way to
+author an AI oracle.
+
+## Design Principles
+
+1. Declarative
+
+By authoring an oracle using a schema-validated declarative specification (ie., a
+controlled natural language) a non-coder can unambiguously express normative
+behavioral assertions on changes in key observable states in his natural language
+since they can get feedback to fix any of their ambiguous directives.
+
+2. Executable
+
+By compiling an oracle into an evaluator, we can execute one or more
+AI agents against the full oracle or the proposed changes in the oracle
+to give fine-tuning feedback.
+
+3. Multi-state, multi-time
+
+Impact is computed from changes between pre- and post-run states. An oracle may
+observe multiple states across multiple times. For example, what was the impact
+of an agent pre-intervention, post-intervention, and follow-up evaluation?
+
+4. Predicates to express behavioral expectations
+
+Evaluation is based on predicates, which are more general than the deterministic `actual vs expected` form.
+Predicate assertion may carry severity levels.
+
+## Spec schema
+
+- state
+- invariants
 
 ## What is an Oracle?
 
-An AI oracle is a system that provides guidance, decisions, or classifications based on human expertise and values encoded in a structured specification.
-
 ## What is an Oracle Spec?
-
-A declarative configuration system for AI behavior governance that allows domain experts to define what constitutes correct AI behavior without needing machine learning expertise.
 
 ## Motivation
 
