@@ -1,18 +1,17 @@
 # Oracle Spec: A Standard Language for Non-Coders to Define Good AI Behavior
 
-Oracle-spec is a controlled natural language (CNL) and schema for declaring
-quality-control predicates that compile into executable checks.
+The aim here is to have developers use a single, machine-readable YAML file (policy.yaml) to define a
+task evaluation policy that can be run against competing AI agents.
 
-Oracle-spec enables non-coders to author verifiable definitions of “good
-behavior”—rules, constraints, and rubrics—without writing custom evaluator
-code. The oracle-spec runtime enforces unambiguous syntax and defined
-semantics, so authors can safely use LLM-assisted tools (e.g., Codex, Claude
-Code) to draft and refine rules while preserving determinism.
+```console
+policy-compose validate -f biohack-extract.yaml
+policy-compose evaluate -f biohack-extract.yaml
+```
 
 After execution, oracle-spec produces human-readable feedback from (1)
 schema/grammar validation and (2) predicate evaluation results. This feedback
 helps authors clarify intent, resolve ambiguity, and iteratively converge on a
-precise behavioral contract within the controlled grammar.
+precise AI behavioral contract.
 
 ## Small Design Innovations
 
