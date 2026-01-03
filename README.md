@@ -4,6 +4,11 @@ The aim of `naturaleval` is to allow a controlled natural language (CNL) to defi
 an executable and reproducible AI evaluation in as precise a manner as code and
 as expressive a manner as natural language.
 
+Potential usage:
+
+- drive a SWE agent's loop to optimize a LLM prompt with your natural language changes to your `eval-spec.yaml`
+- elicit a human SME (subject matter expert) requirements through chat session with a SWE agent on the composition of an `eval-spec.yaml`.
+
 ## Current Highlights
 
 - **Portability/Reproducibility:** A single YAML file represents your evaluation workflow (rubric, evidence schema, provider bindings). `eval-spec.yaml` has three components
