@@ -1,16 +1,20 @@
 # Natural Eval: Natural Language AI Evaluation
 
-Natural Eval uses a controlled natural language to define a single YAML file, `eval.yaml`, that
-represents an executable AI evaluation workflow.
+Natural Eval uses a controlled natural language to define a single YAML file,
+`eval.yaml`, that represents an executable AI evaluation workflow.
 
-Potential usage:
+The intention is to improve the experience of using AI agents to evaluate AI
+agents by using a YAML with a fixed grammar that can combine the expressiveness
+of a markdown and the precision of unit test code.
 
-- build prompt optimization workflows grounded by an expressive and precise `eval-spec.yaml`
-- elicit AI product engineering requirements from customers through a chat session constrained by the grammar of `eval-spec.yaml`.
+Example uses:
+
+- build AI prompt optimization workflows grounded by `eval.yaml`
+- elicit AI product engineering requirements from customers through a chat session constrained by the grammar of `eval.yaml`.
 
 ## Current Highlights
 
-- **Portability/Reproducibility:** A single YAML file represents your evaluation workflow (rubric, evidence schema, provider bindings). `eval-spec.yaml` has three components
+- **Portability/Reproducibility:** A single YAML file represents your evaluation workflow (rubric, evidence schema, provider bindings). `eval.yaml` has three components
   - evidence - input and output schema and location
   - criteria/rubric - Define what is good AI behavior given the evidence?
   - provider bindings - Define how to simulate the AI workers we are judging?
@@ -27,8 +31,7 @@ Potential usage:
 ## Example CLI usage
 
 ```bash
-naturaleval interpret --input eval-spec.md --output eval-spec.yaml
-naturaleval --patch -f eval-compose.yaml "top 20 nobsmed.com response to `health hacks for migraines` are more relevant than chatgpt.com's same results"
-naturaleval run --ai-input observations.jsonl --eval-spec eval-spec.yaml
-naturaleval evaluate --ai-output observations.jsonl --eval-spec eval-spec.yaml
+naturaleval interpret --input eval.md --output eval.yaml
+naturaleval --patch -f eval.yaml "top 20 nobsmed.com response to `health hacks for migraines` are more relevant than chatgpt.com's same results"
+naturaleval evaluate -f eval.yaml
 ```
