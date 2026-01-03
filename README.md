@@ -1,10 +1,13 @@
 # Evaldoc
 
-Evaldoc allows natural language to define and execute AI evaluations using one file (`ai-task.eval.yaml`).
+Evaldoc allows defining an executable AI evaluation workflow with natural
+language and representing that knowledge with one `eval-doc.yaml`file. In other
+words, this is a tool for storing testable knowledge of AI good behavior from folks who
+know zero about building AI.
 
-## Evaluation Language Design Challenge
+## Criteria Language Grammar Design Challenge
 
-Our open source grammar design challenge is to maximizes criteria precision while minimizing the loss of general criteria expressiveness.
+Our open source grammar design challenge is to maximize criteria precision while minimizing the loss of general criteria expressiveness.
 
 ## Current Highlights
 
