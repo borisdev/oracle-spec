@@ -5,9 +5,9 @@ Natural Eval uses a controlled natural language to define a single YAML file,
 
 ## Intention
 
-The intention is to improve the experience of using AI agents to evaluate AI
-agents by using a YAML with a fixed grammar that can combine the expressiveness
-of a markdown and the precision of unit test code.
+The intention is to improve the experience of AI evaluation by using a YAML
+with a fixed grammar that can combine the expressiveness of a markdown and the
+precision of unit test code.
 
 Potential uses:
 
